@@ -32,7 +32,7 @@ This project implements **real-time monitoring** and **auto-scaling of a local V
 sudo apt update
 sudo apt install -y python3 python3-pip prometheus node-exporter docker.io
 
-
+🔹 2. Setup Prometheus for Monitoring
 # Download and extract Prometheus
 wget https://github.com/prometheus/prometheus/releases/download/v2.45.0/prometheus-2.45.0.linux-amd64.tar.gz
 tar xvf prometheus-2.45.0.linux-amd64.tar.gz
@@ -52,4 +52,4 @@ scrape_configs:
 
 # Visit: http://localhost:9090
 nohup node_exporter &
-
+🔹 3. Run Node Exporter
