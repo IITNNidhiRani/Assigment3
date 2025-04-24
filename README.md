@@ -38,7 +38,7 @@ wget https://github.com/prometheus/prometheus/releases/download/v2.45.0/promethe
 tar xvf prometheus-2.45.0.linux-amd64.tar.gz
 cd prometheus-2.45.0.linux-amd64
 
-# Modify prometheus.yml
+## Modify prometheus.yml
 nano prometheus.yml
 global:
   scrape_interval: 5s
@@ -47,7 +47,7 @@ scrape_configs:
   - job_name: "node"
     static_configs:
       - targets: ["localhost:9100"]
-# Start Prometheus
+## Start Prometheus
 ./prometheus --config.file=prometheus.yml
 
 # Visit: http://localhost:9090
