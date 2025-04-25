@@ -32,24 +32,5 @@ This project implements **real-time monitoring** and **auto-scaling of a local V
 sudo apt update
 sudo apt install -y python3 python3-pip prometheus node-exporter docker.io
 
-🔹 2. Setup Prometheus for Monitoring
-# Download and extract Prometheus
-wget https://github.com/prometheus/prometheus/releases/download/v2.45.0/prometheus-2.45.0.linux-amd64.tar.gz
-tar xvf prometheus-2.45.0.linux-amd64.tar.gz
-cd prometheus-2.45.0.linux-amd64
-
-## Modify prometheus.yml
-nano prometheus.yml
-global:
-  scrape_interval: 5s
-
-scrape_configs:
-  - job_name: "node"
-    static_configs:
-      - targets: ["localhost:9100"]
-## Start Prometheus
-./prometheus --config.file=prometheus.yml
-
-# Visit: http://localhost:9090
-nohup node_exporter &
-🔹 3. Run Node Exporter
+**
+###📈 2. Monitor CPU Usage & Trigger Auto-Scaling**
