@@ -174,6 +174,48 @@ CPU usage rose to 82%, triggering scale-up.
 Instance count increased from 1 to 3.
 
 All results were logged and screenshots were included in the final report.
+**Architecture Diagrams**
+1️⃣ **Application Architecture** – Retrieval-Augmented Generation (RAG) System
+This diagram illustrates a RAG-based system where responses are enhanced by retrieving relevant information from a pre-indexed vector database. The architecture combines document processing, vector similarity search, and large language model (LLM) generation.
+
+Key Components:
+
+Document Processing: Raw documents are parsed and chunked.
+
+Embedding Layer: Chunks are converted into vector representations using an embedding model.
+
+Vector Store: Embeddings are indexed and stored for similarity search.
+
+Query Pipeline: User queries are embedded and searched against the vector store.
+
+Prompt Constructor: Top-k retrieved chunks + query are passed to an LLM to generate a grounded response.
+
+📌 This architecture ensures more accurate, context-aware answers and minimizes hallucinations by grounding outputs in real data.
+![image](https://github.com/user-attachments/assets/97d1ff73-4880-41c2-ad55-766ec2011240)
+
+2️⃣ **Auto-Scaling Architecture – Local VM to GCP**
+This diagram represents a system that monitors CPU usage on a local virtual machine and triggers auto-scaling on Google Cloud Platform (GCP) when usage exceeds a defined threshold (e.g., 75%).
+
+Key Components:
+
+Local VM (Ubuntu):
+
+Prometheus + Node Exporter for real-time CPU monitoring
+
+Shell scripts (monitor_cpu.sh, migrate_to_gcp.sh) to track and trigger scaling
+
+Docker + stress to simulate high CPU load
+
+Google Cloud:
+
+Managed Instance Group (MIG) configured with auto-scaling policy
+
+GCP CLI (gcloud) triggered from local machine
+
+New VM instances created dynamically when CPU crosses threshold
+
+📌 This architecture enables intelligent and cost-effective cloud resource scaling based on local infrastructure performance.
+![Articutre_diagram](https://github.com/user-attachments/assets/c5d0f02e-5a4f-407b-b24c-8f81df35f4ae)
 
 ## Testing & Observation
 During simulated high CPU load using the stress tool within a Docker container, the system behavior was continuously monitored through Prometheus and GCP Monitoring dashboards. Auto-scaling was tested by observing the instance group's response to CPU usage crossing the defined threshold.
