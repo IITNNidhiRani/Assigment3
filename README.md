@@ -244,7 +244,7 @@ Use Docker Compose to manage Prometheus, Node Exporter, and the CPU stress conta
 Extend to Kubernetes for pod-level auto-scaling with HPA
 
 Build a cost visualization dashboard using GCP Billing APIs
-<img width="524" alt="image" src="https://github.com/user-attachments/assets/b09a0c3b-5c46-4aca-8d9e-1d2514563be5" />
+
 
 
 ## Author
