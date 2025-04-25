@@ -83,7 +83,6 @@ Systemd + Shell Scripting – Background task automation
 -Updated package manager and installed essential packages:
 ```bash
 sudo apt update && sudo apt install -y python3 python3-pip docker.io prometheus node-exporter
-```bash
 
 
 Enabled and started Prometheus and Node Exporter services.
