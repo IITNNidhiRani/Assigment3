@@ -1,0 +1,13 @@
+groups
+sudo usermod -aG docker $USER
+newgrp docker   # or log out and log in again
+
+docker stop recursing_goldberg
+
+sudo su
+docker stop recursing_goldberg
+exit
+
+docker inspect --format '{{.State.Pid}}' recursing_goldberg
+# Let's say output is 12345
+sudo kill -9 12345
