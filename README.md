@@ -102,7 +102,7 @@ global:
 scrape_configs:
   - job_name: "node"
     static_configs:
-      - targets: ["localhost:9100"]
+      - targets: ["localhost:9090"]
 Started Prometheus and accessed the dashboard at http://localhost:9090.
 
 **Deployed Node Exporter**
@@ -174,7 +174,9 @@ CPU usage rose to 82%, triggering scale-up.
 Instance count increased from 1 to 3.
 
 All results were logged and screenshots were included in the final report.
+
 **Architecture Diagrams**
+
 1️⃣ **Application Architecture** – Retrieval-Augmented Generation (RAG) System
 This diagram illustrates a RAG-based system where responses are enhanced by retrieving relevant information from a pre-indexed vector database. The architecture combines document processing, vector similarity search, and large language model (LLM) generation.
 
