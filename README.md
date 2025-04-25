@@ -81,7 +81,7 @@ Systemd + Shell Scripting – Background task automation
 **Installed Required Software**
 
 -Updated package manager and installed essential packages:
-```bash
+
 sudo apt update && sudo apt install -y python3 python3-pip docker.io prometheus node-exporter
 
 
