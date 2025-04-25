@@ -88,8 +88,8 @@ sudo apt update && sudo apt install -y python3 python3-pip docker.io prometheus 
 
 Enabled and started Prometheus and Node Exporter services.
 
-
 **Configured Prometheus Monitoring**
+
 
 Downloaded and extracted the latest Prometheus release.
 
