@@ -241,9 +241,9 @@ IAM roles applied to the service account successfully restricted access to only 
 
 All log messages, Prometheus metrics, and scaling events aligned with expected behavior, validating the implementation.
 ## Repository & Demo
-**Source Code:**
+**Source Code:**  https://github.com/IITNNidhiRani/Assigment3.git
 
-**Video Demonstration:**
+**Video Demonstration:**  https://youtu.be/zBqPbVZuGz4
 ## ✅ Conclusion
 This project successfully demonstrates the design and implementation of a real-time CPU monitoring and auto-scaling system using both open-source and cloud-native tools. By leveraging Prometheus and Node Exporter for local resource monitoring, Docker for generating CPU load, and Google Cloud services for compute scalability, the system effectively automates the migration and scaling of workloads based on CPU usage.
 
